@@ -17,5 +17,11 @@ def Name(request):
 def Despedida(request):
     return HttpResponse("HASTA LUEGO AMIGO")
 
+
+
 def OtroSaludo(request):
     return HttpResponse("ENVIANDO OTRO SALUDO")
+    
+
+def Curso(request):
+    return HttpResponse("ESTOY TOMANDO EL CURSO DE DESARROLLO DE SOFTWARE ")

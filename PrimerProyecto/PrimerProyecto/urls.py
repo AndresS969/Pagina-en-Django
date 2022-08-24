@@ -19,7 +19,7 @@ from django.urls import path
 
 from PrimerProyecto.views import saludo #importmaos la funcion
 from PrimerProyecto.views import Name, Despedida
-from PrimerProyecto.views import OtroSaludo
+from PrimerProyecto.views import OtroSaludo, Curso
 
 
 urlpatterns = [
@@ -28,4 +28,5 @@ urlpatterns = [
     path('Name/', Name),
     path('Despedida/', Despedida),
     path('OtroSaludo/', OtroSaludo),
+    path('curso/', Curso),
 ]
