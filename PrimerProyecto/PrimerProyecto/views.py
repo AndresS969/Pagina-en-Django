@@ -49,3 +49,9 @@ def Años(request):
     futuro = año - nacimiento
 
     return HttpResponse(futuro)
+
+def MayorEdad(request, edad):
+    if edad>=18:
+        return HttpResponse("es mayor de edad")
+    else:
+        return HttpResponse("es menor de edad")
