@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+import datetime
 
 #crear una vista en django: con una fucnion
 
@@ -25,3 +26,18 @@ def OtroSaludo(request):
 
 def Curso(request):
     return HttpResponse("ESTOY TOMANDO EL CURSO DE DESARROLLO DE SOFTWARE ")
+
+def HoraFecha(request):
+    fecha_actual = datetime.datetime.now()
+
+    FormatoHTML = """<html>
+    <body>
+    <h1> Fecha y Hora actual: %s #marcador de posicion: 
+    </h1>
+    </body>
+    </html> 
+    """  % fecha_actual
+    #%h #marcador de posicion: 
+
+   
+    return HttpResponse(FormatoHTML)
