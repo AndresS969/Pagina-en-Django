@@ -41,3 +41,11 @@ def HoraFecha(request):
 
    
     return HttpResponse(FormatoHTML)
+
+def Años(request):
+    año = 2070
+    nacimiento = 1999
+
+    futuro = año - nacimiento
+
+    return HttpResponse(futuro)

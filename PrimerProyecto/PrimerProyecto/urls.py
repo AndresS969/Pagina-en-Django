@@ -22,6 +22,7 @@ from PrimerProyecto.views import saludo #importmaos la funcion
 from PrimerProyecto.views import Name, Despedida
 from PrimerProyecto.views import OtroSaludo, Curso
 from PrimerProyecto.views import HoraFecha
+from PrimerProyecto.views import Años 
 
 
 urlpatterns = [
@@ -32,4 +33,5 @@ urlpatterns = [
     path('OtroSaludo/', OtroSaludo),
     path('Curso/', Curso),
     path('HoraFecha/', HoraFecha),
+    path('Años/', Años),
 ]
