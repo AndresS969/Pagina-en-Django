@@ -67,18 +67,27 @@ def ContenidoHTML(request, nombre, edad):
     """ %(nombre,edad) #codigo HTML creaod en una vista, Plantilla htm en una vista
     return HttpResponse(contenido)
 
+class Persona(object):
+    def __init__(self, curso, universidad):
+        self.curso=curso
+        self.universidad=universidad #instancimos la clase Persona en la vista y la gregamos a la plantilla
+
+
 def Plantilla(request): #vista capaz de cagar plantilla
     #abrimos el documento que contiene la plantilla
 
     nombre1 = "andres"
     apellido = "silvera"
+    Andres = Persona("Python", "UNAL")
+
+
     plantillaexterna = open(r"C:\Users\jose\Desktop\Proyecto Django\PrimerProyecto\PrimerProyecto\Mis Plantillas\Plantillas.html")
    #cargar el documento en una variable de tipo template
     template = Template(plantillaexterna.read())
     
     #cerrrar el documento externo que hemos abierto
     plantillaexterna.close()
-    contexto = Context({"nombre_persona": nombre1, "apellido_persona": apellido}) #agregar variables o funciones a la plantilla a traves de un diccionario
+    contexto = Context({"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad}) #agregar variables o funciones a la plantilla a traves de un diccionario
     documento = template.render(contexto)
 
     return HttpResponse(documento)
