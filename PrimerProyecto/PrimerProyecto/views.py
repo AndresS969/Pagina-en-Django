@@ -1,5 +1,7 @@
+from multiprocessing import context
 from django.http import HttpResponse
 import datetime
+from django.template import Template, Context
 
 #crear una vista en django: con una fucnion
 
@@ -64,3 +66,16 @@ def ContenidoHTML(request, nombre, edad):
     </html>
     """ %(nombre,edad) #codigo HTML creaod en una vista, Plantilla htm en una vista
     return HttpResponse(contenido)
+
+def Plantilla(request): #vista capaz de cagar plantilla
+    #abrimos el documento que contiene la plantilla
+    plantillaexterna = open(r"C:\Users\jose\Desktop\Proyecto Django\PrimerProyecto\PrimerProyecto\Mis Plantillas\Plantillas.html")
+   #cargar el documento en una variable de tipo template
+    template = Template(plantillaexterna.read())
+    
+    #cerrrar el documento externo que hemos abierto
+    plantillaexterna.close()
+    contexto = Context()
+    documento = template.render(contexto)
+
+    return HttpResponse(documento)
