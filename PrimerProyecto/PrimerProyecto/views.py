@@ -69,13 +69,16 @@ def ContenidoHTML(request, nombre, edad):
 
 def Plantilla(request): #vista capaz de cagar plantilla
     #abrimos el documento que contiene la plantilla
+
+    nombre1 = "andres"
+    apellido = "silvera"
     plantillaexterna = open(r"C:\Users\jose\Desktop\Proyecto Django\PrimerProyecto\PrimerProyecto\Mis Plantillas\Plantillas.html")
    #cargar el documento en una variable de tipo template
     template = Template(plantillaexterna.read())
     
     #cerrrar el documento externo que hemos abierto
     plantillaexterna.close()
-    contexto = Context()
+    contexto = Context({"nombre_persona": nombre1, "apellido_persona": apellido}) #agregar variables o funciones a la plantilla a traves de un diccionario
     documento = template.render(contexto)
 
     return HttpResponse(documento)
