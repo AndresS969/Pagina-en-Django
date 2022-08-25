@@ -55,3 +55,12 @@ def MayorEdad(request, edad):
         return HttpResponse("es mayor de edad")
     else:
         return HttpResponse("es menor de edad")
+
+def ContenidoHTML(request, nombre, edad):
+    contenido = """<html>
+    <body>
+    <p> nombre: %s / edad: %s</p>
+    </body>
+    </html>
+    """ %(nombre,edad) #codigo HTML creaod en una vista, Plantilla htm en una vista
+    return HttpResponse(contenido)
