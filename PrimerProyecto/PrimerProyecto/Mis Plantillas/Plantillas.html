@@ -12,6 +12,15 @@
     <p> mi lista: {{listas}} </p>
     <p> Acceder a el elemento views a traves de su indice: {{listas.1}}</p>
     <p>para acceder a los elementos de la lista es con un punto y el indice. "lista.1"</p>
+    <p><strong> Elementos en la lista: </strong></p>
+    <p> 
+        
+        {% for i in listas %}
+        {{i}}
+
+        {% endfor %}
+    </p>
+    
     </body>
     </html> 
     
