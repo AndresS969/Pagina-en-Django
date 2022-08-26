@@ -87,7 +87,7 @@ def Plantilla(request): #vista capaz de cagar plantilla
     
     #cerrrar el documento externo que hemos abierto
     plantillaexterna.close()
-    contexto = Context({"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad}) #agregar variables o funciones a la plantilla a traves de un diccionario
+    contexto = Context({"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad, "listas":["Django", "Views","condicionales","bulces for y while", "clases"]}) #agregar variables o funciones a la plantilla a traves de un diccionario
     documento = template.render(contexto)
 
     return HttpResponse(documento)
