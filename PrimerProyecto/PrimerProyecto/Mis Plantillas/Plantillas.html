@@ -14,12 +14,17 @@
     <p>para acceder a los elementos de la lista es con un punto y el indice. "lista.1"</p>
     <p><strong> Elementos en la lista: </strong></p>
     <p> 
-        
+        {% if "Django" in listas %}
+        <p> Si existe en la lista </p>
         {% for i in listas %}
-        {{i}}
+        <li>{{i}} </li> 
 
         {% endfor %}
+        {% else %}
+            <p><strong>el elemento no existe en la lista</strong> </p>
+        {% endif %}
     </p>
+      
     
     </body>
     </html> 
