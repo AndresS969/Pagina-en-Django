@@ -92,4 +92,8 @@ def Plantilla(request): #vista capaz de cagar plantilla
     #contexto = Context({"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad, "listas":["Django", "Views","condicionales","bulces for y while", "clases"]}) #agregar variables o funciones a la plantilla a traves de un diccionario
     #documento = plantilla_Externa.render({"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad, "listas":["Django", "Views","condicionales","bulces for y while", "clases"]})
 
-    return render(request, "Plantillas.html", {"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad, "listas":["Django", "Views","condicionales","bulces for y while", "clases"]})
+    return render(request, "Plantillas.html", {"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad, "listas":["Django", "Views","condicionales","bulces for y while", "clases"]} )
+
+def hija(request):
+    fecha = datetime.datetime.now()
+    return render(request, "Hija.html",{"horayfecha": fecha} )

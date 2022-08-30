@@ -1,0 +1,20 @@
+[33m3c265ca[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m agregmoas una barra horizontal
+[33m785747a[m incrustamos una plantilla en otra plantilla, usamos {% include nombredelaplantillaquevamosagregar %}
+[33me7cf80f[m agregamos elmetodo render para simplificar mas la pagina. return render(request, plantilla.html, diccionario)
+[33m5de6f78[m se agrego cargadores de plantillas y especificamos donde se van almacenar nuestras plantillas
+[33m0e17c6c[m comentario multilinea en una plantilla:{% comment %} este es un comentario,{%end comment %}
+[33m2ac18e5[m agregamos un condicional a una plantilla
+[33m9718334[m se agrego un bucle for dentro de una plantilla, el buclefor se debe llamar con corchetes: {% for i in listas %}, luego se cierra: {% endfor %}
+[33m94dc065[m acceder a los elemntos de la lista en la plantilla a traves de sus indices: {{listas.1}}
+[33m1ff606e[m se agrego una lista a la plantilla
+[33mbd00190[m agregamos una instancia de una clase a una plantilla
+[33mabee6b3[m agregamos una variable a traves de un diccionario a la plantilla
+[33mb0a079e[m agregamos un color diferente a la plantilla
+[33m2e936b9[m Agregamos nuestra primera plantilla a una vista
+[33m50232c0[m se agrgeo una funcion con dosparametros, agregamos html a una vista
+[33mdc4091c[m se agrego una funcion que determina si una persona es mayor de edad, una URL con parametros
+[33m52b071c[m agregue una plantilla nueva
+[33m3177061[m agregue una funcion que me calcula cuantos años tendre en el 2070
+[33m1cf0f4d[m Agregue una vista de fecha y hora con un marcador de posicion
+[33me339340[m se agrego una vista nueva a la pagina
+[33mb8d9257[m Primer proyecto Django
