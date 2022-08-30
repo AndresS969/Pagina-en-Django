@@ -1,7 +1,7 @@
 from multiprocessing import context
 from django.http import HttpResponse
 import datetime
-from django.template import Template, Context
+from django.template import Template, Context, loader
 
 #crear una vista en django: con una fucnion
 
@@ -81,13 +81,14 @@ def Plantilla(request): #vista capaz de cagar plantilla
     Andres = Persona("Python", "UNAL")
 
 
-    plantillaexterna = open(r"C:\Users\jose\Desktop\Proyecto Django\PrimerProyecto\PrimerProyecto\Mis Plantillas\Plantillas.html")
+    #plantillaexterna = open(r"C:\Users\jose\Desktop\Proyecto Django\PrimerProyecto\PrimerProyecto\Mis Plantillas\Plantillas.html")
    #cargar el documento en una variable de tipo template
-    template = Template(plantillaexterna.read())
+    #template = Template(plantillaexterna.read())
+    plantilla_Externa = loader.get_template("Plantillas.html")
     
     #cerrrar el documento externo que hemos abierto
-    plantillaexterna.close()
-    contexto = Context({"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad, "listas":["Django", "Views","condicionales","bulces for y while", "clases"]}) #agregar variables o funciones a la plantilla a traves de un diccionario
-    documento = template.render(contexto)
+    #plantillaexterna.close()
+    #contexto = Context({"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad, "listas":["Django", "Views","condicionales","bulces for y while", "clases"]}) #agregar variables o funciones a la plantilla a traves de un diccionario
+    documento = plantilla_Externa.render({"nombre_persona": nombre1, "apellido_persona": apellido, "curso1": Andres.curso, "universidad1": Andres.universidad, "listas":["Django", "Views","condicionales","bulces for y while", "clases"]})
 
     return HttpResponse(documento)
