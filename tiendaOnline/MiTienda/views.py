@@ -68,4 +68,9 @@ def user_password(request):
         return HttpResponse("Debe ingresar los datos solicitados!")
 
 
+def contacto(request):
+    if request.method=="POST":
+        return render(request, "gracias.html")
+        
+    return render(request, "formulario_contacto.html")
 

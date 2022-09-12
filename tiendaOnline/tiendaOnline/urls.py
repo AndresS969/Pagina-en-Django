@@ -13,4 +13,5 @@ urlpatterns = [
     path('edad/', views.calcular),
     path('formulario/', views.formulario_lsogin),
     path('login/', views.user_password),
+    path('Contacto/', views.contacto),
 ]
