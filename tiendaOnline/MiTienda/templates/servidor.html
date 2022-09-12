@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> lOGIN</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style>
+        #h3{
+            color: white;
+        
+        }
+        body{
+            background-color: black;
+        }
+    </style>
+    <body>
+        <form action="/Suma/" method="GET">
+            <label> Numero1: </label>
+            <input type="text"  name="numero1"> 
+            <br>
+            <br>
+            <label for="y"> Numero2: </label>
+            <input type="text"  name="numero2"> 
+            <br>
+            <br>
+            <input type="submit" value="iniciar">
+            <br>
+            <br>
+        </form> 
+        <hr>
+        <br>
+        <h3> Lista de Lenguajes:</h3>
+        <form action="/listado/">
+            <label> Frameworks: </label>
+            <input type="text" name="listas">
+            <br>
+            <br>
+            <p> {{info}}</p>
+            <input type="submit" value="Mostrar">
+
+
+
+        </form>
+        
+        
+        
+    </body>
+</html>
