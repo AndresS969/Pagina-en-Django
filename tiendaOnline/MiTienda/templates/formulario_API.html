@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+<body>
+    <h1> Contcatanos </h1>
+   {% if forms.errors %}
+    <p style="color: red;"> por favor revisa este campo!</p>
+
+    {% endif %}
+    <form action="/Api/" method="POST">{% csrf_token %}
+        <table>
+
+            {{ form.as_table }}
+        </table>
+        <input type="submit" value="enviar">
+    </form>
+</body>
+
+
+</html>

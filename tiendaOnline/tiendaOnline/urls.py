@@ -14,4 +14,9 @@ urlpatterns = [
     path('formulario/', views.formulario_lsogin),
     path('login/', views.user_password),
     path('Contacto/', views.contacto),
+    path('Contacto/', views.contacto),
+    path('Server_User/', views.enviar),
+    path('Respuesta/', views.request_answer),
+    path('Api/', views.Form_Api),
+    
 ]
